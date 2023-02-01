@@ -10,7 +10,7 @@ ENV LC_ALL C.UTF-8
 RUN apt-get update -y && apt-get dist-upgrade -y
 
 # Install packages 
-RUN apt-get install -y wget apache2
+RUN apt-get install  --force-yes -y wget apache2
 
 # Install vulnerable versions from wayback/snapshot archive
 RUN wget http://snapshot.debian.org/archive/debian/20130319T033933Z/pool/main/o/openssl/openssl_1.0.1e-2_amd64.deb -O /tmp/openssl_1.0.1e-2_amd64.deb && \
